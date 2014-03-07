@@ -1,0 +1,11 @@
+!!!
+%html{dir: "ltr", lang: "en-US", xmlns: "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Admin
+
+    = stylesheet_link_tag    "admin/application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "admin/application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    =yield
+

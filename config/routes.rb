@@ -1,9 +1,19 @@
 Rails4PennyAuction::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  resources :auctions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'main#index'
+
+  namespace :admin do
+    # Directs /admin/auctions/* to Admin::AuctionsController
+    # (app/controllers/admin/auctions_controller.rb)
+    resources :auctions
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

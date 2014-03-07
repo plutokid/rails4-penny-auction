@@ -27,6 +27,7 @@ Rails4PennyAuction::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
+  # http://stackoverflow.com/questions/12217852/rails-namespace-css-not-working
   config.assets.compile = false
 
   # Generate digests for assets URLs.
