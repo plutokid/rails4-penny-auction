@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 1.2'
 # http://activeadmin.info/docs/0-installation.html
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+gem 'devise', '3.2.3'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

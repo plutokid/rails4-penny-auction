@@ -6,10 +6,10 @@ class @UserSessionComponent extends Rrs.Component
 
     $(@elements.loginButton).fancybox
       maxWidth	: 400
-      maxHeight	: 300
+      maxHeight	: 400
       fitToView	: false
       width		  : '70%'
-      height		: '110px'
+      height		: '140px'
       autoSize	: false
       closeClick	: false
       openEffect	: 'none'

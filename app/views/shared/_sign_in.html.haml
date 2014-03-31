@@ -1,14 +1,22 @@
 #login-modal{style: "display:none"}
-  %form#login-form{method: "post"}
+  =form_for(User.new, url: session_path(:user), html:{id: 'login-form', :'data-type' => 'json'}, remote: true) do |f|
     .row
       %label.control-label.span3 Email:
-      %input.span8{name: "email", placeholder: "Email", type: "text"}/
+      = f.text_field :email, autofocus: true, class:'span8', placeholder: "Email"
       %span.js-error-placement.hidden.error-placement.icon.span1
         %i.fa.fa-exclamation-triangle
     .row
       %label.control-label.span3 Password:
-      %input.span8{name: "password", placeholder: "Password", type: "password"}/
+      = f.password_field :password, autocomplete: "off", class:"span8", placeholder: "Password"
       %span.js-error-placement.hidden.error-placement.icon.span1
         %i.fa.fa-exclamation-triangle
+
+    - if Devise.mappings[:user].rememberable?
+      .row
+        %div.control-label.span3
+          &nbsp;
+        %div.span8
+          = f.check_box :remember_me
+          = f.label :remember_me
     .row
-      %input.btn.btn-ok.offset5{type: "submit", value: "Login"}/
+      = f.submit "Login", class: "btn btn-ok offset5" 

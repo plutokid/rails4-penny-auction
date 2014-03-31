@@ -199,6 +199,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   coffee-rails (~> 4.0.0)
+  devise (= 3.2.3)
   execjs
   factory_girl_rails
   fancybox2-rails (~> 0.2.8)
