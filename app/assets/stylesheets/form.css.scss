@@ -1,0 +1,98 @@
+@import "variables";
+
+.row{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 4px;
+  padding: 3px 0 3px 0;
+  [class*="span"]{
+    float: left;
+  }
+  .span3{
+
+    width: 24%;
+  }
+  .span5{
+    width: 49%;
+  }
+  .span9{
+    width: 75%;
+  }
+  .span8{
+    width: 66.4%;
+  }
+  .control-label{
+    text-align: right;
+  }
+
+  .offset5{
+    margin-left: 41.5%;
+  }
+}
+
+.row.error{
+  color: #ff0000;
+  input[type="password"],input[type="text"]{
+    border-color: #ff0000;
+  }
+}
+.btn{
+  cursor: pointer;
+}
+input.btn{
+  line-height: 0px;
+}
+.btn-ok{
+  background-color: $primary-color;
+  height: 26px;
+  line-height: 26px;
+  border: 3px solid $secondary-color;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #e7110a;
+  padding: 5px;
+  margin: 5px;
+}
+
+.btn:hover{
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+form{
+  input[type="password"],input[type="text"]{
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid $primary-color;
+  }
+
+  .error-placement.icon{
+    padding: 4px 0 0 4px;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.alert{
+  color: #e3e3e3;
+  border-radius: 5px;
+  border: 1px solid #6e6e6e;
+  background-color: $primary-color;
+  padding: 8px;
+  ol{
+    margin: 20px;
+  }
+
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}

@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require fancybox
+//= require_tree ./libs
+//= require session/user-session
+//= require main/index
+
+

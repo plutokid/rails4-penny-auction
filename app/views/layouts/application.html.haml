@@ -34,6 +34,8 @@
       / Login-details
       #login-details
         %p
+          %a.js-login{href: "#login-modal"} Login
+        %p
           Welcome,
           %a#user{href: "#"} Guest
           \.
@@ -90,3 +92,5 @@
                 %a{href: "#"} BestSeller.com
               %a{href: "http://css-free-templates.com/"} CSS-FREE-TEMPLATES.COM
     / End Footer
+
+    = render 'shared/sign_in'

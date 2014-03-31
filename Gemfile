@@ -42,6 +42,14 @@ group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
+
+#https://github.com/netzpirat/haml_coffee_assets
+gem 'haml_coffee_assets'
+gem 'execjs'
+
+gem 'fancybox2-rails', '~> 0.2.8'
+gem "font-awesome-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

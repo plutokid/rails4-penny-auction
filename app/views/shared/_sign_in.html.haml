@@ -1,0 +1,14 @@
+#login-modal{style: "display:none"}
+  %form#login-form{method: "post"}
+    .row
+      %label.control-label.span3 Email:
+      %input.span8{name: "email", placeholder: "Email", type: "text"}/
+      %span.js-error-placement.hidden.error-placement.icon.span1
+        %i.fa.fa-exclamation-triangle
+    .row
+      %label.control-label.span3 Password:
+      %input.span8{name: "password", placeholder: "Password", type: "password"}/
+      %span.js-error-placement.hidden.error-placement.icon.span1
+        %i.fa.fa-exclamation-triangle
+    .row
+      %input.btn.btn-ok.offset5{type: "submit", value: "Login"}/
