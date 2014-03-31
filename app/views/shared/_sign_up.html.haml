@@ -1,0 +1,21 @@
+#signup-modal{style: "display:none"}
+  =form_for(User.new, url: registration_path(:user), html: {id: 'sign_up_user', :'data-type' => 'json'}, remote: true) do |f|
+    .row
+      %label.control-label.span3 Email:
+      = f.text_field :email, autofocus: true, class:'span8', placeholder: "Email"
+      %span.js-error-placement.hidden.error-placement.icon.span1
+        %i.fa.fa-exclamation-triangle
+    .row
+      %label.control-label.span3 Password:
+      = f.password_field :password, autocomplete: "off", class:"span8", placeholder: "Password"
+      %span.js-error-placement.hidden.error-placement.icon.span1
+        %i.fa.fa-exclamation-triangle
+
+    .row
+      = f.label :password_confirmation, class:"control-label span3"
+      = f.password_field :password_confirmation, autocomplete: "off", class:"span8", placeholder: "Password confirmation"
+      %span.js-error-placement.hidden.error-placement.icon.span1
+        %i.fa.fa-exclamation-triangle
+
+    .row
+      = f.submit "Register", class: "btn btn-ok offset5"

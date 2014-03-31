@@ -15,8 +15,20 @@ class @UserSessionComponent extends Rrs.Component
       openEffect	: 'none'
       closeEffect	: 'none'
 
+    $(@elements.signupButton).fancybox
+      maxWidth	: 400
+      maxHeight	: 400
+      fitToView	: false
+      width		  : '70%'
+      height		: '160px'
+      autoSize	: false
+      closeClick	: false
+      openEffect	: 'none'
+      closeEffect	: 'none'
+
   elements:
     loginButton     : ".js-login"
+    signupButton    : ".js-signup"
     loginForm       : "form#login-form"
 
   _attachFormValidation: ->
