@@ -18,6 +18,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: rails4-penny-auction_development
+  host: localhost
   pool: 5
   username: postgres
   password: ljhjuf
@@ -47,6 +48,7 @@ test:
   adapter: postgresql
   encoding: unicode
   database: rails4-penny-auction_test
+  host: localhost
   pool: 5
   username: postgres
   password: ljhjuf
@@ -55,6 +57,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: rails4-penny-auction_production
+  host: localhost
   pool: 5
   username: rails4-penny-auction
   password:
