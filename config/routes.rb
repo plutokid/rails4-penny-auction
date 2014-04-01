@@ -1,5 +1,5 @@
 Rails4PennyAuction::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :auctions

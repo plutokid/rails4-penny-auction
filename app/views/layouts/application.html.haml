@@ -33,19 +33,29 @@
       .cl  
       / Login-details
       #login-details
-        %p
-          %a.js-login{href: "#login-modal"} Login
-        %p
-          %a.js-signup{href: "#signup-modal"} Register
-        %p
-          Welcome,
-          %a#user{href: "#"} Guest
-          \.
-        %p
-          %a.cart{href: "#"}>
-            %img{alt: "", src: "assets/cart-icon.png"}/
-          Shopping Cart (0)
-          %a.sum{href: "#"} $0.00
+        -  if current_user
+          %p
+            Welcome,
+            %a#user{href: "#"} Guest
+            \.
+          %p
+            %a.cart{href: "#"}>
+              %img{alt: "", src: "assets/cart-icon.png"}/
+            Shopping Cart (0)
+            %a.sum{href: "#"} $0.00
+          %p
+            =link_to "Sign out", destroy_user_session_path, :method => :delete
+        - else
+          %p
+            %a.js-login{href: "#login-modal"}
+              %i.fa.fa-user
+              Login
+          %p
+            %a.js-signup{href: "#signup-modal"} Register
+
+          = render 'shared/sign_in'
+          = render 'shared/sign_up'
+
       / End Login-details
     / End Header
 
@@ -95,5 +105,3 @@
               %a{href: "http://css-free-templates.com/"} CSS-FREE-TEMPLATES.COM
     / End Footer
 
-    = render 'shared/sign_in'
-    = render 'shared/sign_up'
