@@ -3,6 +3,7 @@ class @UserSessionComponent extends Rrs.Component
   init: ->
     super
     @_attachFormValidation()
+    @_attachServerResonseHandling()
 
     $(@elements.loginButton).fancybox
       maxWidth	: 400
@@ -26,10 +27,28 @@ class @UserSessionComponent extends Rrs.Component
       openEffect	: 'none'
       closeEffect	: 'none'
 
+
+
   elements:
     loginButton     : ".js-login"
     signupButton    : ".js-signup"
     loginForm       : "form#login-form"
+    signupForm      : "form#signup-form"
+
+  _attachServerResonseHandling: ->
+    $("#{@elements.loginForm}, #{@elements.signupForm}").bind("ajax:success", (event, xhr, settings) ->
+      location.reload()
+    ).bind("ajax:error", (event, xhr, settings, exceptions) ->
+      errorMessages = if xhr.responseJSON['error']
+        xhr.responseJSON['error']
+      else if xhr.responseJSON['errors']
+        $.map(xhr.responseJSON["errors"], (v, k) ->
+           k + " " + v
+        ).join ""
+      else
+        "Unknown error"
+      $.growlUI("Error", errorMessages)
+    )
 
   _attachFormValidation: ->
     $(@elements.loginForm).validate

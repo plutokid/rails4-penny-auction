@@ -1,5 +1,5 @@
 #signup-modal{style: "display:none"}
-  =form_for(User.new, url: registration_path(:user), html: {id: 'sign_up_user', :'data-type' => 'json'}, remote: true) do |f|
+  =form_for(User.new, url: registration_path(:user), html: {id: 'signup-form', :'data-type' => 'json'}, remote: true) do |f|
     .row
       %label.control-label.span3 Email:
       = f.text_field :email, autofocus: true, class:'span8', placeholder: "Email"
