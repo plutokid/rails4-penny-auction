@@ -15,7 +15,9 @@
 //= require turbolinks
 //= require fancybox
 //= require_tree ./libs
+//= require_tree ./auction
+
 //= require session/user-session
-//= require main/index
+//= require main
 
 

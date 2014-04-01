@@ -68,158 +68,25 @@
     .products
       %h3 Featured Products
       %ul
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image01.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %div.bid-container{href: "#"}
-              %a.bid-btn Bid!
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image02.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %a.buy-btn{href: "#"}
-              BUY NOW
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image03.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %a.buy-btn{href: "#"}
-              BUY NOW
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image04.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %a.buy-btn{href: "#"}
-              BUY NOW
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image05.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %a.buy-btn{href: "#"}
-              BUY NOW
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image06.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %a.buy-btn{href: "#"}
-              BUY NOW
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image07.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %a.buy-btn{href: "#"}
-              BUY NOW
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
-        %li
-          .product
-            %a.info{href: "#"}
-              %span.holder
-                %img{alt: "", src: "assets/image08.jpg"}/
-                %span.book-name Book Name
-                %span.author by John Smith
-                %span.description
-                  Maecenas vehicula ante eu enim pharetra
-                  %br>/
-                  scelerisque dignissim
-                  = succeed "sollicitudin" do
-                    %br/
-            %a.buy-btn{href: "#"}
-              BUY NOW
-              %span.price
-                %span.low> $
-                22
-                %span.high 00
+        - @live_auctions.each do |auction|
+          %li
+            .product.live.js-auction-item{"data-id" => auction.id}
+              %a.info{href: "#"}
+                %span.time-left
+                  %i.fa.fa-clock-o
+                  %span.value{"data-secs-left" => "10"} 10 sec
+
+                %span.holder
+                  %img{alt: "", src: "assets/image01.jpg"}/
+                  %span.book-name Book Name
+                  %span.bidder maverick
+              %div.bid-container{href: "#"}
+                %a.bid-btn.js-do-bid{class:('js-login' unless current_user), href:('#login-modal'  unless current_user)} Bid!
+                %span.price
+                  %span.low> $
+                  22
+                  %span.high 00
+
       / End Products
     .cl  
     / Best-sellers

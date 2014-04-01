@@ -308,7 +308,7 @@ textarea {
         display: block;
         padding: 7px;
         width: 136px;
-        height: 329px;
+//        height: 329px;
         &:hover {
           background: url(product-hover.png) no-repeat 0 0;
           text-decoration: none;
@@ -332,82 +332,6 @@ textarea {
   }
 }
 
-.product {
-  .bid-container {
-    position: absolute;
-    bottom: 8px;
-    left: 7px;
-    //background: url(buy-btn.png) repeat-x 0 0;
-    width: 100%; //126px;
-    height: 31px;
-    color: #fff;
-    font-size: 12px;
-    line-height: 31px;
-    text-transform: uppercase;
-    font-weight: bold;
-    z-index: 10;
-    //padding-left: 10px;
-    white-space: nowrap;
-    &:hover {
-      text-decoration: none;
-    }
-
-    .bid-btn{
-      width: 100px;
-      padding-left: 33px;
-      text-decoration: none;
-      display: block;
-      background-color: #015faa;
-      color: #fff;
-      &:hover{
-        background-color: #0f173a;
-      }
-      &:active{
-        background-color: #0252aa;
-      }
-    }
-    .price {
-      padding: 0 7px;
-      background: url(best-price.png) no-repeat 0 0;
-      font-size: 22px;
-      line-height: 60px;
-      position: absolute;
-      top: -22px;
-      right: -11px;
-      height: 62px;
-      .low {
-        font-size: 14px;
-        vertical-align: baseline;
-      }
-      .high {
-        font-size: 11px;
-        line-height: 14px;
-        vertical-align: super;
-      }
-    }
-  }
-
-  .book-name {
-    font-size: 12px;
-    line-height: 20px;
-    color: #0182b5;
-    font-family: 'Georgia', Arial, serif;
-    display: block;
-  }
-  .author {
-    font-size: 11px;
-    line-height: 14px;
-    color: #3d3d3d;
-    font-family: 'Georgia', Arial, serif;
-    padding: 0 0 9px 1px;
-    display: block;
-  }
-  .description {
-    font-size: 11px;
-    line-height: 16px;
-    color: #878787;
-  }
-}
 
 #best-sellers {
   padding-top: 18px;
@@ -497,9 +421,7 @@ textarea {
       vertical-align: super;
     }
   }
-  .product .author {
-    color: #3d3d3d;
-  }
+
 }
 
 #footer {

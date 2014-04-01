@@ -44,7 +44,7 @@ class @UserSessionComponent extends Rrs.Component
       else if xhr.responseJSON['errors']
         $.map(xhr.responseJSON["errors"], (v, k) ->
            k + " " + v
-        ).join ""
+        ).join "<br>"
       else
         "Unknown error"
       $.growlUI("Error", errorMessages)

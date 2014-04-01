@@ -31,9 +31,9 @@
 }
 
 .row.error{
-  color: #ff0000;
+  color: $danger-color;
   input[type="password"],input[type="text"]{
-    border-color: #ff0000;
+    border-color: $danger-color;
   }
 }
 .btn{
