@@ -6,4 +6,7 @@ class Auction < ActiveRecord::Base
   validates :starts_at,     presence: true
   validates :ends_at,       presence: true
   validates :status,        presence: true
+
+
+  has_one :bid
 end

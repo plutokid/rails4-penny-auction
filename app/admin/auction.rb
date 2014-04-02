@@ -25,4 +25,16 @@ ActiveAdmin.register Auction do
     end
     f.actions
   end
+
+  controller do
+    # override the create action to add has_one association wit Bid model
+    def create
+      current_bid = params[:auction][:start_price]
+      bid         = Bid.create(current_bid: current_bid)
+
+      create!
+      #create has_one association
+      @auction.bid = bid
+    end
+  end
 end

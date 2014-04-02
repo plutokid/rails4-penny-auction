@@ -78,7 +78,8 @@
 
                 %span.holder
                   %img{alt: "", src: "assets/image01.jpg"}/
-                  %span.book-name Book Name
+                  %span.book-name
+                    = auction.title
                   %span.bidder maverick
               %div.bid-container{href: "#"}
                 %a.bid-btn.js-do-bid{class:('js-login' unless current_user), href:('#login-modal'  unless current_user)} Bid!
