@@ -74,13 +74,16 @@
               %a.info{href: "#"}
                 %span.time-left
                   %i.fa.fa-clock-o
-                  %span.value{"data-secs-left" => "10"} 10 sec
+                  - secs_left = get_secs_left(auction)
+                  %span.value{"data-secs-left" => secs_left}
+                    = secs_left
 
                 %span.holder
                   %img{alt: "", src: "assets/image01.jpg"}/
                   %span.book-name
                     = auction.title
-                  %span.bidder maverick
+                  %span.bidder
+                    = get_auctions_bidder_name auction
               %div.bid-container{href: "#"}
                 %a.bid-btn.js-do-bid{class:('js-login' unless current_user), href:('#login-modal'  unless current_user)} Bid!
                 %span.price
