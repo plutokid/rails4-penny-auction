@@ -85,8 +85,9 @@
                 %a.bid-btn.js-do-bid{class:('js-login' unless current_user), href:('#login-modal'  unless current_user)} Bid!
                 %span.price
                   %span.low> $
-                  22
-                  %span.high 00
+                  = int_from_decimal(auction.bid.current_bid)
+                  %span.high
+                    = fractional_from_decimal(auction.bid.current_bid)
 
       / End Products
     .cl  
