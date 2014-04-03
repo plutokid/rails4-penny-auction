@@ -87,8 +87,8 @@
               %div.bid-container{href: "#"}
                 %a.bid-btn.js-do-bid{class:('js-login' unless current_user), href:('#login-modal'  unless current_user)} Bid!
                 %span.price
-                  %span.low> $
-                  = int_from_decimal(auction.bid.current_bid)
+                  %span.low>
+                  = raw(@settings.currency_symbol) + int_from_decimal(auction.bid.current_bid)
                   %span.high
                     = fractional_from_decimal(auction.bid.current_bid)
 

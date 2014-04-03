@@ -19,6 +19,6 @@ module MainHelper
   def get_secs_left(auction)
     #secs_left = ((auction.expires_at - Time.now) * 24 * 60 * 60).to_i
     secs_left = (auction.expires_at - Time.now).to_i
-    secs_left = Random.rand(5...30) if secs_left < 0
+    secs_left = Random.rand(5...@settings.expiration_counter_max_secs) if secs_left < 0
   end
 end
